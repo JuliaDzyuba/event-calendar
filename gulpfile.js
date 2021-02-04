@@ -54,7 +54,8 @@ let {src, dest} = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter = require('gulp-fonter');
+    fonter = require('gulp-fonter'),
+    ghpages = require('gh-pages');
 
 function browserSync(params) {
   browsersync.init({
@@ -204,6 +205,9 @@ function fontsStyle( ){
 }
 
 function cb( ){}
+
+// gulp deploy
+ghpages.publish(poject_folder, callback);
 
 function watchFiles( ){
   gulp.watch([path.watch.html], html);

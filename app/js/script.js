@@ -1,5 +1,7 @@
 import { dragAndDrop } from './dragAndDrop.min.js';
 
+const REPO = '/event-calendar';
+
 const selectUser = document.getElementById('userSelect');
 
 const createError = document.querySelector('.create-error');
@@ -115,7 +117,7 @@ function sortByUser(user) {
 };
 
 function init() {
-  if(window.location.pathname == '/') {    
+  if(window.location.pathname === REPO + '/') {    
     renderEvents(store);
     dragAndDrop();
 
@@ -133,7 +135,7 @@ function init() {
       user === 'all' ? renderEvents(store) : sortByUser(user);
     });
 
-  } else if(window.location.pathname == '/create-event.html') {
+  } else if(window.location.pathname === REPO + '/create-event.html') {
       createBtn.addEventListener('click', (e) => {
         e.preventDefault();
         getEventData();      
