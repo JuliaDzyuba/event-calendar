@@ -1,0 +1,4 @@
+// поменять именя шрифта(первый аргумент) и откорректировать жирность (напр., bold - это 700
+@include font("montserrat", "montserratbold", "700", "normal");
+@include font("montserrat", "montserrat", "400", "normal");
+@include font("montserrat", "montserratlight", "300", "normal");

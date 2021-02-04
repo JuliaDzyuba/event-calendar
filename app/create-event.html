@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Calendar</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="test">
+  <title>Create new event</title> 
+   
+  <link rel="stylesheet" href="css/style.min.css">  
+</head>
+<body>
+  <main class="container">
+    <div class="create-content">
+      <form class="col s12" id="create">
+        <h2>Create new event</h2>
+
+        <div class="create-error">
+          <p>Failed to create an event. Time slot is already booked </p>
+          <span class="btn-close">&otimes;</span>
+        </div>
+        
+        <div class="row">
+          <div class="col s12">
+            <span>Name of the event: </span>
+            <div class="input-field">
+              <input id="eventName" name="eventName" type="text" class="validate" maxlength="100">  
+                          
+            </div>
+          </div>
+        </div>
+        <span class="helper-text" data-error="wrong" data-success="right"></span>
+        <div class="row">
+          <div class="col s12">
+            <span>Participants (press Ctrl or Shift to multiple select): </span>
+            <div class="input-field col s12">
+              <select multiple name="participants">
+                <option selected disabled>Choose members</option>
+                <option value="Mary">Mary</option>
+                <option value="Jack">Jack</option>
+                <option value="Maks">Maks</option>
+                <option value="Kevin">Kevin</option>
+                <option value="Helen">Helen</option>
+              </select>              
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 ">
+            <span>Day: </span>
+            <select name="day">
+              <option disabled>Choose event day</option>
+              <option value="Mon" selected>Monday</option>
+              <option value="Tue">Tuesday</option>
+              <option value="Wed">Wednesday</option>
+              <option value="Thu">Thursday</option>
+              <option value="Fri">Friday</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 ">
+            <span>Time: </span>
+            <select name="time">
+              <option disabled selected>Choose time</option>
+              <option value="10" selected>10:00</option>
+              <option value="11">11:00</option>
+              <option value="12">12:00</option>
+              <option value="13">13:00</option>
+              <option value="14">14:00</option>
+              <option value="15">15:00</option>
+              <option value="16">16:00</option>
+              <option value="17">17:00</option>
+              <option value="18">18:00</option>
+            </select>
+          </div>
+        </div>
+        
+        <a href="/" class="btn waves-effect waves-light btn-cancel grey">Cancel</a>
+        <button type="submit" class="btn waves-effect waves-light btn-create">Create</button>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- <script type="module" src="js/script.js"></script> -->
+  <script type="module" src="js/script.min.js"></script>
+</body>
+</html>
