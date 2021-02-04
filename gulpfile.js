@@ -206,8 +206,11 @@ function fontsStyle( ){
 
 function cb( ){}
 
-// gulp deploy
-ghpages.publish(poject_folder, callback);
+// "scripts": {
+//   "deploy": "gh-pages -d dist"
+// }
+// npm run deploy
+// ghpages.publish(poject_folder, callback);
 
 function watchFiles( ){
   gulp.watch([path.watch.html], html);

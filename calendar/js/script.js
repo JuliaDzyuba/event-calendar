@@ -105,7 +105,7 @@ function getEventData() {
   store = [...store, eventData];  
   localStorage.setItem('events', JSON.stringify(store));      
   form.reset();
-  window.location.pathname = '/';  
+  window.location.pathname = '/index.html';  
 };
 
 function sortByUser(user) {
@@ -115,7 +115,7 @@ function sortByUser(user) {
 };
 
 function init() {
-  if(window.location.pathname == '/') {    
+  if(window.location.pathname.includes('/index.html')) {    
     renderEvents(store);
     dragAndDrop();
 
@@ -133,7 +133,8 @@ function init() {
       user === 'all' ? renderEvents(store) : sortByUser(user);
     });
 
-  } else if(window.location.pathname == '/create-event.html') {
+  } else if(window.location.pathname.includes('/create-event.html')) {
+
       createBtn.addEventListener('click', (e) => {
         e.preventDefault();
         getEventData();      
