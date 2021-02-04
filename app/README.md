@@ -5,11 +5,12 @@ Display meetings planned;
 Filter meetings for a particular team member;
 Add new meetings;
 Delete meetings;
+Drag and Drop meetings;
 
 
 ### Project setup
 
-From the project directory you need clone only:
+From the project directory you need clone only:<br />
 app directory,
 gulpfile.js,
 package.json
@@ -34,13 +35,13 @@ You will also see any errors in the console.
 
 ### Deployment
 
-The app for production will be automatically build in the 'dist' folder.<br />
+The app for production will be automatically build in the 'calendar' folder.<br />
 The build is minified.
 It correctly bundles in production mode and optimizes the build for the best performance.<br />
 Your app is ready to be deployed!
 
 ### Attention
 
-Not use the calendar folder, it is ready build (only for viewing).
-The calendar folder here was added only for fast deploy app in github-page.
+Not use the 'calendar' folder, it is ready build (only for viewing).
+The 'calendar' folder here was added only for fast deploy app in github-page.
 
