@@ -11,8 +11,8 @@ Drag and Drop meetings;
 ### Project setup
 
 From the project directory you need clone only:<br />
-app directory,
-gulpfile.js,
+app directory,<br />
+gulpfile.js,<br />
 package.json
 
 
