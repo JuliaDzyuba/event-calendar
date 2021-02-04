@@ -105,7 +105,7 @@ function getEventData() {
   store = [...store, eventData];  
   localStorage.setItem('events', JSON.stringify(store));      
   form.reset();
-  window.location.pathname = '/index.html';  
+  window.location.pathname = window.location.pathname.replace('create-event.html', 'index.html');  
 };
 
 function sortByUser(user) {
