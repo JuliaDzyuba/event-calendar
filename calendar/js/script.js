@@ -1,9 +1,12 @@
 import { dragAndDrop } from './dragAndDrop.min.js';
+const DOMAIN = "https://juliadzyuba.github.io/event-calendar/";
+// const DOMAIN = "http://localhost:3000/";
 
 const selectUser = document.getElementById('userSelect');
 
 const createError = document.querySelector('.create-error');
 const closeBtn = document.querySelector('.btn-close');
+
 
 const helperText = document.querySelector('.helper-text');
 const createBtn = document.querySelector('.btn-create');
@@ -105,7 +108,8 @@ function getEventData() {
   store = [...store, eventData];  
   localStorage.setItem('events', JSON.stringify(store));      
   form.reset();
-  window.location.pathname = window.location.pathname.replace('create-event.html', 'index.html');  
+  
+  window.location.href = DOMAIN;
 };
 
 function sortByUser(user) {
@@ -114,8 +118,10 @@ function sortByUser(user) {
   renderEvents(userEvents);    
 };
 
+
 function init() {
-  if(window.location.pathname.includes('/index.html')) {    
+  if(window.location.href === DOMAIN) { 
+      
     renderEvents(store);
     dragAndDrop();
 
@@ -133,8 +139,11 @@ function init() {
       user === 'all' ? renderEvents(store) : sortByUser(user);
     });
 
-  } else if(window.location.pathname.includes('/create-event.html')) {
+  
+  } else if(window.location.href=== DOMAIN + 'create-event.html') {
 
+      const cancelBtn = document.querySelector('.btn-cancel');
+      cancelBtn.href = DOMAIN;
       createBtn.addEventListener('click', (e) => {
         e.preventDefault();
         getEventData();      
