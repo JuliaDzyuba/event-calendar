@@ -210,7 +210,7 @@ function cb( ){}
 //   "deploy": "gh-pages -d dist"
 // }
 // npm run deploy
-// ghpages.publish(poject_folder, callback);
+//ghpages.publish(poject_folder, callback); //in the development mode must be commented
 
 function watchFiles( ){
   gulp.watch([path.watch.html], html);
